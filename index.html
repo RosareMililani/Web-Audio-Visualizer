@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Project 2: Audio Visualizer</title>
+    <link href="styles/default-styles.css" type="text/css" rel="stylesheet" />
+    <script src="./src/loader.js" type="module"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Web Audio Visualizer</h1>
+        <h2 id="header-h2">&#127926;Map of the Soul: 7&#127926;</h2>
+    </header>
+    <main>
+
+        <article class="content">
+            <canvas width="800" height="500"></canvas>
+            <div id="controls">
+                <section><h2>Audio Controls</h2>
+                
+                    <audio controls loop></audio>
+                    <button id="fsButton">Full Screen</button>
+                    <br>
+                    <label>Select a Track:
+                        <select id="trackSelect">
+                            <option value="media/interlude shadow.mp3" selected>Track 1: Interlude: Shadow</option>
+                            <option value="media/black-swan.mp3">Track 2: Black Swan</option>
+                            <option value="media/filter.mp3">Track 3: Filter</option>
+                            <option value="media/my time.mp3">Track 4: 시차(My Time)</option>
+                            <option value="media/louder than bombs.mp3">Track 5: Louder than Bombs</option>
+                            <option value="media/ON.mp3">Track 6: ON</option>
+                            <option value="media/ugh.mp3">Track 7: 욱(UGH!)</option>
+                            <option value="media/zero o clock.mp3">Track 8: 00:00 (Zero O'Clock)</option>
+                            <option value="media/inner child.mp3">Track 9: Inner Child</option>
+                            <option value="media/friends.mp3">Track 10: 친구 (Friends)</option>
+                            <option value="media/moon.mp3">Track 11: Moon</option>
+                            <option value="media/respect.mp3">Track 12: Respect</option>
+                            <option value="media/we are bulletproof the eternal.mp3">Track 13: We are Bulletproof: the
+                                Eternal</option>
+                            <option value="media/outro ego.mp3">Track 14: Outro: Ego</option>
+                        </select>
+                    </label>
+                </section>
+
+                <!-- Slider Controls -->
+                <section>
+                    <h3>- Slider Controls -</h3>
+
+                    Volume: <input type="range" id="volumeSlider" min="0" max="2" value="1" step="0.01">
+                    <span id="volumeLabel">???</span>
+                    <br>
+                    Noise: <input type="range" id="noiseSlider" min="0" max="0.95" value="0" step="0.01">
+                    <span id="noiseLabel">0</span>
+                    <br>
+                    Speed: <input type="range" id="speedSlider" min=".25" max="2" value="1" step=".25">
+                    <span id="speedLabel">???</span>
+                    <br>
+                    <!-- Delay: <input type="range" id="delaySlider" min="0" max="100" value="0" step="10">
+                    <span id="delayLabel">???</span> -->
+                </section>
+
+                <!-- Checkboxes -->
+                <section>
+                    <h3>- Checkbox Controls -</h3>
+
+                    <span><input type="checkbox" id="gradientCB"><label for="gradientCB">Show Gradient</label></span>
+                    <span><input type="checkbox" id="invertCB"><label for="invertCB">Invert Colors</label></span>
+                    <span><input type="checkbox" id="blueCircle"><label for="blueCircle">Show Circles</label></span>
+                    <span><input type="checkbox" id="embossCB"><label for="embossCB">Show Emboss</label></span>
+                </section>
+
+                <!-- Radio options -->
+                <section>
+                    <h3>- Radio Controls -</h3>
+
+                    <label for="noneCB">None</label>
+                    <input type="radio" name="dataType" id="noneCB" checked>
+                    <label for="waveformCB">Waveform</label>
+                    <input type="radio" name="dataType" id="waveformCB">
+                    <label for="barsCB">Frequency</label>
+                    <input type="radio" name="dataType" id="barsCB">
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+
+
+
+</html>
